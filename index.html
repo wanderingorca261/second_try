@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选书籍下载</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        /* 主题栏样式 */
+        .header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* 书籍容器样式 */
+        .books-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin: 1.5rem 0;
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        /* 书籍网格布局 */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        /* 单个书籍条目样式 */
+        .book-item {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .book-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .book-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+        
+        .book-description {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .download-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 2rem 1rem;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 主题栏 -->
+    <header class="header">
+        <h1>马列毛入门书籍下载</h1>
+        <p>入门马列毛书籍,供宣传和初学者使用</p>
+        <!-- 阅读器下载链接：把 href 替换为本地阅读器下载地址 -->
+        <a id="reader-download" class="download-btn" href="https://github.com/wanderingorca261/TEST/releases/download/1.11/Koodo-Reader-1.7.4.zip" style="margin-top:1rem; display:inline-block;">下载koodo reader</a>
+        <a id="reader-download" class="download-btn" href="https://github.com/wanderingorca261/TEST/releases/download/1.12/_v9.7.apk" style="margin-top:1rem; display:inline-block;">下载静读天下app</a>
+    </header>
+    
+    <!-- 书籍展示区域 -->
+    <div class="books-container">
+
+        <!-- 第一部分：经典书籍精选 -->
+         <p class="book-description">本网站资料仅供交流参考学习批判，无任何不良倾向或引导，部分资料由网友添加，本网站不承担任何责任</p>
+        <h2 class="section-title">经典书籍精选</h2>
+        <div class="books-grid">
+            <!-- 原有书籍条目 1 -->
+            <div class="book-item">
+                <img src="second_try/maoxuan.png"  alt="猫" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">毛泽东选集</h3>
+                    <p class="book-description">经典原著</p>
+                    <a href="second_try/《毛泽东选集》（1-7卷，包括后续两卷静火版） (毛泽东) (Z-Library).epub"  download="《毛泽东选集》（1-7卷，包括后续两卷静火版） (毛泽东) (Z-Library).epub" class="download-btn">立即下载</a>
+                </div>
+            </div>
+            
+            <!-- 原有书籍条目 2 -->
+            <div class="book-item">
+                <img src="second_try/beima.png" alt="北马" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">北京大学马克思主义学会作品集</h3>
+                    <p class="book-description">当代理论</p>
+                    <a download="北大马会作品集.epub" href="https://github.com/wanderingorca261/TEST/releases/download/1.13/Works.Collection.of.Peking.University.Marxist.Society.epub" class="download-btn" >立即下载</a>
+                </div>
+            </div>
+            
+            <!-- 原有书籍条目 3 -->
+            <div class="book-item">
+                <img src="second_try/wujianlun.png" alt="设计思维" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">十年简论-概述</h3>
+                    <p class="book-description">水陆洲长篇作品的概述版</p>
+                    <a download="无产阶级文化大革命概述·简论(简要本)(2024年精排).pdf" href="second_try/无产阶级文化大革命概述·简论(简要本)(2024年精排).pdf" class="download-btn">立即下载</a>
+                </div>
+            </div>
+            
+            <!-- 原有书籍条目 4 -->
+            <div class="book-item">
+                <img src="second_try/shinian.png" alt="飞梦" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">十年非梦</h3>
+                    <p class="book-description">回忆录</p>
+                    <a href="second_try/十年非梦——黄金海回忆录 (黄金海等) (Z-Library).pdf" class="download-btn" download="十年非梦——黄金海回忆录 (黄金海等) (Z-Library).pdf">立即下载</a>
+                </div>
+            </div>
+            
+            <!-- 原有书籍条目 5 -->
+            <div class="book-item">
+                <img src="second_try/gongli.png" alt="区块链技术" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">共和国的历程</h3>
+                    <p class="book-description">传播最广，最著名的作品之一</p>
+                    <a download="共和国的历程（修订版）2023年8月.pdf" href="second_try/共和国的历程（修订版）2023年8月.pdf"  class="download-btn">立即下载</a>
+                </div>
+            </div>
+                
+            <!-- 原有书籍条目 6 -->
+            <div class="book-item">
+                <img src="second_try/xinghuo.png" alt="网络安全基础" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">星火手册</h3>
+                    <p class="book-description">面向群众的零基础科普读物</p>
+                    <a download="星火手册.pdf" href="second_try/星火手册.pdf" class="download-btn">立即下载</a>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="second_try/xiaoping.png" alt="网络安全基础" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">晓萍的趣事</h3>
+                    <p class="book-description">洛水起誓</p>
+                    <a download="晓萍的趣事.pdf" href="second_try/晓萍的趣事.pdf" class="download-btn">立即下载</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二部分：书籍整合包 -->
+        <h2 class="section-title">入门书籍整合</h2>
+        <div class="books-grid">
+            <!-- 整合包条目 1 -->
+            <div class="book-item">
+                <img src="https://picsum.photos/seed/package1/600/400" alt="整合包1" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">入门学习必读合集</h3>
+                    <p class="book-description">包含多本入门读物的合集</p>
+                    <a href="https://github.com/wanderingorca261/TEST/releases/download/1.14/books01.zip" class="download-btn">立即下载</a>
+                </div>
+            </div>
+
+            <!-- 整合包条目 2 -->
+            <div class="book-item">
+                <img src="https://picsum.photos/seed/package2/600/400" alt="整合包2" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">马恩列斯毛原著合集</h3>
+                    <p class="book-description">深入学习当然要读原著啦</p>
+                    <a href="https://github.com/wanderingorca261/TEST/releases/download/1.15/books02.zip" class="download-btn">立即下载</a>
+                </div>
+            </div>
+
+            <!-- 整合包条目 3 -->
+            <div class="book-item">
+                <img src="https://picsum.photos/seed/package3/600/400" alt="整合包3" class="book-image">
+                <div class="book-info">
+                    <h3 class="book-title">当代理论选集</h3>
+                    <p class="book-description">当代丰富革命思想的很小一部分</p>
+                    <a href="https://github.com/wanderingorca261/TEST/releases/download/1.16/books03.zip" class="download-btn">立即下载</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
